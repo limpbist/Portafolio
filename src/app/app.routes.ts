@@ -11,10 +11,11 @@ import
 from "./components/index.paginas";
 /*redireccionando las paginas */
 const app_routes: Routes = [
-  { path: '', component: PortafolioComponent },
+  { path: 'index', component: PortafolioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'item', component: PortafolioItemComponent },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: '**', pathMatch: 'full', redirectTo: 'index' }
 ];
 
-export const app_routing = RouterModule.forRoot(app_routes);
+//useHash : true crear rutas html5 para conpatibilidad
+export const app_routing = RouterModule.forRoot(app_routes , {useHash:true});
