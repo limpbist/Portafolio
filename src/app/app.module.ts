@@ -1,9 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//http
+import { HttpModule } from '@angular/http';
+
 //RUTAS-importadas desde app.routes.ts
 import { app_routing } from "./app.routes";
 
+//SERVICIOS
+import { InformacionService } from "./services/informacion.service";
 //COMPONENTES
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -22,12 +27,14 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
     AboutComponent,
     PortafolioItemComponent
   ],
-  //importando app_routing
+  //importando app_routing,HpptModule
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    HttpModule
   ],
-  providers: [],
+  //importando InformacionService
+  providers: [ InformacionService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
