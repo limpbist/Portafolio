@@ -20,7 +20,7 @@ export class InformacionService {
    {
      this.http.get("assets/data/infopagina.json")
      .subscribe(data=>{
-       //console.log(data.json());
+        console.log(data.json());
        this.cargada= true;
        this.info=data.json();
      })
