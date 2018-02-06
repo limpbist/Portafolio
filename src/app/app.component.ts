@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 //importando el servicio
 import { InformacionService } from "./services/informacion.service";
+import { ProductosService }  from "./services/productos.service";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ import { InformacionService } from "./services/informacion.service";
 })
 export class AppComponent {
   //llamando a la funcion InformacionService de imformacion.service.ts
-  constructor( public _is:InformacionService){}
+    //llamando a la funcion ProductoService de productos.service.ts
+  constructor( public _is:InformacionService,
+               public _ps:ProductosService){}
 
 }

@@ -8,7 +8,8 @@ import { HttpModule } from '@angular/http';
 import { app_routing } from "./app.routes";
 
 //SERVICIOS
-import { InformacionService } from "./services/informacion.service";
+import { InformacionService } from "./services/informacion.service";//importando
+import { ProductosService } from "./services/productos.service";//importando
 //COMPONENTES
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -34,7 +35,7 @@ import { PortafolioItemComponent } from './components/portafolio-item/portafolio
     HttpModule
   ],
   //importando InformacionService
-  providers: [ InformacionService ],
+  providers: [ InformacionService,ProductosService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
