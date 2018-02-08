@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+//importando para obtener la url
+import { ActivatedRoute } from "@angular/router";
+
 
 
 @Component({
@@ -7,7 +10,18 @@ import { Component } from '@angular/core';
   templateUrl: './portafolio-item.component.html',
   styles: []
 })
-export class PortafolioItemComponent  {
+export class PortafolioItemComponent
+{
+  constructor(private route:ActivatedRoute)
+  {
+    route.params.subscribe
+    (
+      parametros=>
+      {
+        console.log( parametros );//obtener el objeto 
+        console.log(parametros['id']);//obtener solo el producto
+      }
+    )
 
-
+  }
 }

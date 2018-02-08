@@ -13,7 +13,7 @@ from "./components/index.paginas";
 const app_routes: Routes = [
   { path: 'index', component: PortafolioComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'item', component: PortafolioItemComponent },
+  { path: 'item/:id', component: PortafolioItemComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'index' }
 ];
 

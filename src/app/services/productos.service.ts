@@ -19,7 +19,7 @@ export class ProductosService
     {
       this.http.get("https://about-2ad57.firebaseio.com/producto_idx.json")
       .subscribe(res=>{
-        console.log(res.json());
+        //console.log(res.json());
         //setTimeout funcion para ver la animacion cargando en el portafolio.component.html
         //setTimeout(()=>
         //{
