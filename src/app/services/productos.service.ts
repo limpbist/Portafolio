@@ -7,9 +7,19 @@ export class ProductosService
 {
   productos:any[]=[];
   cargando:boolean=true;
+  
   constructor(private http:Http)
   {
     this.cargar_productos();
+
+  }
+
+
+
+  public cargar_item(cod:string)
+  {
+    return this.http.get('https://about-2ad57.firebaseio.com/productos/'+cod+'.json');
+    //retornar el item seleccionado {cod} llama al id del item
   }
 
   public cargar_productos()
@@ -25,6 +35,7 @@ export class ProductosService
         //{
           this.cargando = false;
           this.productos=res.json();
+
         //},1500)
 
       })
