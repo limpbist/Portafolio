@@ -6,14 +6,16 @@ import
 {
  AboutComponent,
  PortafolioComponent,
- PortafolioItemComponent
-}
-from "./components/index.paginas";
+ PortafolioItemComponent,
+ SearchComponent
+ //siempre importar en approutes
+} from "./components/index.paginas";
 /*redireccionando las paginas */
 const app_routes: Routes = [
   { path: 'index', component: PortafolioComponent },
   { path: 'about', component: AboutComponent },
   { path: 'item/:id', component: PortafolioItemComponent },
+  { path: 'buscar/:termino', component: SearchComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'index' }
 ];
 

@@ -30,7 +30,7 @@ export class PortafolioItemComponent
           {
           this.item = parametros['id']//guardando el codigo de la imagen para llamar
           this.producto = items.json();//guardando la informacion en el array
-          console.log(this.producto);
+          //console.log(this.producto);
 
 
           })
