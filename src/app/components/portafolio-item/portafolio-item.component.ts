@@ -19,10 +19,7 @@ export class PortafolioItemComponent
   constructor(private route:ActivatedRoute,
               private _ps: ProductosService)
   {
-    route.params.subscribe
-    (
-      parametros=>
-      {
+    route.params.subscribe(parametros=>{
         //console.log( parametros );//obtener el objeto
         //console.log(parametros['id']);//obtener solo el producto
         _ps.cargar_item(parametros['id'])
